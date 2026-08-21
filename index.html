@@ -499,6 +499,22 @@
     // reply back. Replace with your deployed Worker's URL.
     const CHAT_WORKER_URL = 'https://portfolio-chat-proxy.ndouatshii1.workers.dev';
 
+    // Escapes raw text so it can never be interpreted as HTML/script,
+    // then re-applies a small, safe set of formatting: **bold**, mailto/tel
+    // links already in the message, and line breaks. Anything typed by a
+    // user (including stray < > tags) is shown as plain text, never executed.
+    function formatChatText(raw) {
+        const escaped = raw
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        return escaped
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n/g, '<br>');
+    }
+
     const chatToggle      = document.getElementById('chatToggle');
     const chatWindow      = document.getElementById('chatWindow');
     const chatClose       = document.getElementById('chatClose');
@@ -546,18 +562,20 @@
         if (chatBadge) { chatBadge.textContent = n; chatBadge.style.display = n > 0 ? 'flex' : 'none'; }
     }
 
-    function addMessage(role, text) {
+    function addMessage(role, text, opts = {}) {
         let followups = [];
         if (role === 'bot') {
             const match = text.match(/FOLLOWUPS:\s*(.+)/i);
             if (match) { followups = match[1].split('|').map(s => s.trim()).filter(Boolean); text = text.replace(/FOLLOWUPS:.*/is, '').trim(); }
         }
+        const rawTextForHistory = text;
+        const displayHtml = opts.raw ? text : formatChatText(text);
         const msg = document.createElement('div');
         msg.className = `chat-msg ${role}`;
         msg.innerHTML = `
             <div class="chat-msg-avatar">${role === 'bot' ? '<i class="fas fa-robot"></i>' : 'You'}</div>
             <div class="chat-msg-content">
-                <div class="chat-msg-bubble">${text}</div>
+                <div class="chat-msg-bubble">${displayHtml}</div>
                 <div class="chat-msg-time">${getTime()}</div>
             </div>`;
         chatMessages.appendChild(msg);
@@ -574,10 +592,10 @@
         }
         chatMessages.scrollTop = chatMessages.scrollHeight;
         const saved = loadHistory() || { messages: [], history: [] };
-        saved.messages.push({ role, text, time: getTime() });
+        saved.messages.push({ role, text: rawTextForHistory, time: getTime(), raw: !!opts.raw });
         saved.history = conversationHistory;
         saveHistory(saved.messages, conversationHistory);
-        return text;
+        return rawTextForHistory;
     }
 
     function restoreHistory() {
@@ -586,7 +604,8 @@
             saved.messages.forEach(m => {
                 const msg = document.createElement('div');
                 msg.className = `chat-msg ${m.role}`;
-                msg.innerHTML = `<div class="chat-msg-avatar">${m.role === 'bot' ? '<i class="fas fa-robot"></i>' : 'You'}</div><div class="chat-msg-content"><div class="chat-msg-bubble">${m.text}</div><div class="chat-msg-time">${m.time||''}</div></div>`;
+                const displayHtml = m.raw ? m.text : formatChatText(m.text);
+                msg.innerHTML = `<div class="chat-msg-avatar">${m.role === 'bot' ? '<i class="fas fa-robot"></i>' : 'You'}</div><div class="chat-msg-content"><div class="chat-msg-bubble">${displayHtml}</div><div class="chat-msg-time">${m.time||''}</div></div>`;
                 chatMessages.appendChild(msg);
             });
             conversationHistory = saved.history || [];
@@ -645,7 +664,7 @@
         text = text.trim();
         if (!text || isLoading) return;
         if (CHAT_WORKER_URL.includes('YOUR-WORKER-NAME')) {
-            addMessage('bot', '⚠️ Chat backend not configured yet. Deploy the Cloudflare Worker and set <code>CHAT_WORKER_URL</code> in Portfolio.html.');
+            addMessage('bot', '⚠️ Chat backend not configured yet. Deploy the Cloudflare Worker and set <code>CHAT_WORKER_URL</code> in Portfolio.html.', { raw: true });
             chatInput.value = ''; return;
         }
         chatInput.value = '';
@@ -672,7 +691,7 @@
                 addMessage('bot', reply); playChime();
                 if (!isOpen) setUnread(unreadCount + 1);
                 if (/not sure|don't know|cannot find|no information/i.test(reply)) {
-                    setTimeout(() => { addMessage('bot', '📬 Reach Atshilaho directly at <a href="mailto:ndouatshii1@gmail.com" style="color:var(--accent)">ndouatshii1@gmail.com</a> or <a href="tel:+27665173939" style="color:var(--accent)">+27 66 517 3939</a>.'); playChime(); }, 800);
+                    setTimeout(() => { addMessage('bot', '📬 Reach Atshilaho directly at <a href="mailto:ndouatshii1@gmail.com" style="color:var(--accent)">ndouatshii1@gmail.com</a> or <a href="tel:+27665173939" style="color:var(--accent)">+27 66 517 3939</a>.', { raw: true }); playChime(); }, 800);
                 }
             } else { addMessage('bot', 'Sorry, something went wrong. Please try again.'); }
         } catch(err) { removeTyping(); addMessage('bot', 'Connection error. Please try again.'); }
