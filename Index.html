@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ndou Atshilaho | Aspiring Data Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active-page home-page">
+
+    <!-- Giant background text -->
+    <div class="bg-text">ATSHI</div>
+
+    <!-- Top navbar -->
+    <nav class="navbar-home">
+        <a class="home-logo" id="logoLink">ATSHI</a>
+        <div class="home-nav-links">
+            <a class="nav-link-home" data-page="about">About</a>
+            <a class="nav-link-home" data-page="education">Education</a>
+            <a class="nav-link-home" data-page="skills">Skills</a>
+            <a class="nav-link-home" data-page="certifications">Certifications</a>
+            <a class="nav-link-home" data-page="projects">Projects</a>
+            <a class="nav-link-home" data-page="contact">Contact</a>
+        </div>
+        <button class="hire-me-btn" data-page="contact">Hire me →</button>
+    </nav>
+
+    <!-- Floating card left -->
+    <div class="float-card float-left">
+        <div class="float-card-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="float-card-num">2026</div>
+        <div class="float-card-label">In Progress</div>
+    </div>
+
+    <!-- Photo in center foreground -->
+    <div class="home-photo">
+        <img src="ndou.png" alt="Atshilaho Ndou" onerror="this.src='ndou.jpg'">
+    </div>
+
+    <!-- Floating card right -->
+    <div class="float-card float-right">
+        <div class="float-card-traits-label">TRAITS</div>
+        <div class="float-card-label-top">✦ Analytical</div>
+        <div class="float-card-label-top">◯ Data-Driven</div>
+        <div class="float-card-label-top">▲ Problem Solver</div>
+        <div class="float-card-label-top">◆ Detail-Oriented</div>
+        <div class="float-card-label-top">★ Team Player</div>
+    </div>
+
+    <!-- Bottom: typewriter + buttons -->
+    <div class="home-center-bottom">
+        <div class="home-headline"><span id="typewriter"></span></div>
+        <div class="btn-row">
+            <button class="btn btn-primary" data-page="projects">View projects →</button>
+            <button class="btn btn-ghost" data-page="contact">Get in touch</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- INNER PAGES WRAPPER (non-home pages) -->
+<div id="inner-wrapper" style="display:none;">
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a class="logo" id="logoLink">Atshi<span>.</span></a>
+            <div class="nav-links">
+                <a class="nav-link" data-page="home">Home</a>
+                <span class="nav-sep">|</span>
+                <a class="nav-link" data-page="about">About</a>
+                <span class="nav-sep">|</span>
+                <a class="nav-link" data-page="education">Education</a>
+                <span class="nav-sep">|</span>
+                <a class="nav-link" data-page="skills">Skills</a>
+                <span class="nav-sep">|</span>
+                <a class="nav-link" data-page="certifications">Certifications</a>
+                <span class="nav-sep">|</span>
+                <a class="nav-link" data-page="projects">Projects</a>
+                <span class="nav-sep">|</span>
+                <a class="nav-link" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- ABOUT -->
+        <div id="about" class="page">
+            <div class="section-header">
+                <div class="section-tag">About</div>
+                <h2 class="section-title">A little <em>about me</em></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-bio">
+                    <p>I'm a Computer Engineering graduate with a genuine passion for data — the kind that goes beyond numbers on a screen. I'm drawn to the process of finding patterns, asking the right questions, and translating complex information into insights that actually mean something to people.</p>
+                    <p>My foundation was built through engineering studies, where I developed a structured, detail-oriented approach to problem-solving. Over time, I've channelled that into data work — cleaning messy datasets, conducting exploratory analysis, and crafting visualisations that make findings easy to understand and act on.</p>
+                    <p>I thrive in collaborative environments where ideas are challenged and refined. Whether it's contributing to a team project or building something independently, I bring curiosity, discipline, and a commitment to doing the work properly. I'm at the beginning of my data journey — and that excites me.</p>
+                    <div class="trait-grid">
+                        <div class="trait-card">
+                            <div class="trait-icon">🎯</div>
+                            <div class="trait-label">Detail-Oriented</div>
+                            <div class="trait-sub">Precision in every dataset</div>
+                        </div>
+                        <div class="trait-card">
+                            <div class="trait-icon">💡</div>
+                            <div class="trait-label">Curious Learner</div>
+                            <div class="trait-sub">Always exploring new tools</div>
+                        </div>
+                        <div class="trait-card">
+                            <div class="trait-icon">📊</div>
+                            <div class="trait-label">Data-Driven</div>
+                            <div class="trait-sub">Insights over assumptions</div>
+                        </div>
+                        <div class="trait-card">
+                            <div class="trait-icon">👥</div>
+                            <div class="trait-label">Team Player</div>
+                            <div class="trait-sub">Collaborative by nature</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div id="education" class="page">
+            <div class="section-header">
+                <div class="section-tag">Education</div>
+                <h2 class="section-title">Academic <em>background</em></h2>
+            </div>
+            <div class="edu-timeline">
+                <div class="edu-entry">
+                    <div class="edu-dot gold"></div>
+                    <div class="edu-meta">
+                        <span class="edu-year">2026</span>
+                        <span class="edu-badge ongoing">In Progress</span>
+                    </div>
+                    <div class="edu-degree">Honours in Engineering Technology<br>— Computer Engineering</div>
+                    <div class="edu-inst">Cape Peninsula University of Technology (CPUT)</div>
+                </div>
+                <div class="edu-entry">
+                    <div class="edu-dot"></div>
+                    <div class="edu-meta">
+                        <span class="edu-year">2022 — 2025</span>
+                        <span class="edu-badge done">Completed</span>
+                    </div>
+                    <div class="edu-degree">Bachelor of Engineering Technology<br>— Computer Engineering</div>
+                    <div class="edu-inst">Cape Peninsula University of Technology (CPUT)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div id="skills" class="page">
+            <div class="section-header">
+                <div class="section-tag">Skills</div>
+                <h2 class="section-title">My <em>expertise</em></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-panel">
+                    <div class="skill-panel-title"><i class="fas fa-code"></i> Programming & Data Tools</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-panel">
+                    <div class="skill-panel-title"><i class="fas fa-chart-bar"></i> Data Analysis</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Exploratory Data Analysis</span>
+                        <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Insight Reporting</span>
+                    </div>
+                </div>
+                <div class="skill-panel">
+                    <div class="skill-panel-title"><i class="fas fa-tools"></i> Tools & Systems</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Excel</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">PowerPoint</span>
+                        <span class="skill-tag">Word</span>
+                    </div>
+                </div>
+                <div class="skill-panel">
+                    <div class="skill-panel-title"><i class="fas fa-users"></i> Soft Skills</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Analytical Thinking</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Technical Documentation</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Time Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div id="certifications" class="page">
+            <div class="section-header">
+                <div class="section-tag">Certifications</div>
+                <h2 class="section-title">My <em>credentials</em></h2>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <div class="cert-body">
+                        <div class="cert-issuer">Praesignis</div>
+                        <div class="cert-name">AI Practitioner Learning Plan</div>
+                        <div class="cert-meta">
+                            <span class="cert-date"><i class="fas fa-calendar-alt"></i>April 2026</span>
+                            <span class="cert-badge">AI & Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                    <div class="cert-body">
+                        <div class="cert-issuer">Praesignis</div>
+                        <div class="cert-name">Generative AI for Decision Makers</div>
+                        <div class="cert-meta">
+                            <span class="cert-date"><i class="fas fa-calendar-alt"></i> April 2026</span>
+                            <span class="cert-badge">Generative AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon cert-icon-img"><img src="microsoft-fabric-badge.png" alt="Microsoft Certified: Fabric Analytics Engineer Associate badge"></div>
+                    <div class="cert-body">
+                        <div class="cert-issuer">Microsoft</div>
+                        <div class="cert-name">Certified Fabric Analytics Engineer Associate</div>
+                        <div class="cert-meta">
+                            <span class="cert-date"><i class="fas fa-calendar-alt"></i>June 2026</span>
+                            <span class="cert-badge">Data Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div id="projects" class="page">
+            <div class="section-header">
+                <div class="section-tag">Projects</div>
+                <h2 class="section-title">Featured <em>work</em></h2>
+            </div>
+            <div class="project-hero">
+                <div class="project-type">Final Year Project · 2025</div>
+                <div class="project-title">Serverless Computing Framework<br>for Edge Devices</div>
+                <div class="tech-row">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">MQTT</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">Edge Computing</span>
+                </div>
+                <div class="project-block">
+                    <div class="project-block-label">The Problem</div>
+                    <p>Most systems send data from edge devices to the cloud for processing — causing high latency, increased network usage, and failure when connectivity is unstable. Existing serverless platforms are too resource-heavy for constrained edge hardware.</p>
+                </div>
+                <div class="project-block">
+                    <div class="project-block-label">The Solution</div>
+                    <p>A lightweight serverless framework designed to process data locally at the edge. MQTT handles fast event communication, Python functions execute data processing tasks, Docker ensures portable execution, and SQLite stores data locally for quick access.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1GMRsQtvz7Gwde64PF6hapT_SfV_b9Q2K/view" class="btn btn-primary" target="_blank" rel="noopener noreferrer">📄 View Full Report</a>
+            </div>
+
+            <div class="project-hero">
+                <div class="project-type">Personal Project · 2026</div>
+                <div class="project-title">Netflix Movies & TV Shows<br>Exploratory Data Analysis</div>
+                <div class="tech-row">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">Matplotlib</span>
+                    <span class="tech-tag">Google Colab</span>
+                </div>
+                <div class="project-block">
+                    <div class="project-block-label">The Problem</div>
+                    <p>Netflix's public catalog data is messy out of the box — missing directors, cast, and countries, durations blended across minutes and seasons in one column, and a handful of misplaced values sitting in the wrong fields entirely. Raw like this, it can't reliably answer even basic business questions.</p>
+                </div>
+                <div class="project-block">
+                    <div class="project-block-label">The Solution</div>
+                    <p>An end-to-end EDA workflow on 8,800+ titles: cleaning and restructuring the dataset, engineering new features (duration_value, duration_unit, added_year), and exploring content type, genre, country, rating, director, and actor trends with Pandas and Matplotlib to surface Netflix's content strategy and growth patterns from 2008–2021.</p>
+                </div>
+                <a href="https://github.com/Atshi-na" class="btn btn-primary" target="_blank" rel="noopener noreferrer">📄 View on GitHub</a>
+            </div>
+
+            <div class="divider"></div>
+            <div class="section-tag" style="margin-bottom:1.4rem;"><i class="fas fa-book" style="margin-right:0.5rem"></i>Relevant Coursework</div>
+            <div class="course-grid">
+                <div class="course-card">Industrial Computing Design</div>
+                <div class="course-card">Software Design</div>
+                <div class="course-card">Operating Systems</div>
+                <div class="course-card">Database Systems</div>
+                <div class="course-card">Network Systems</div>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div id="contact" class="page">
+            <div class="section-header">
+                <div class="section-tag">Contact</div>
+                <h2 class="section-title">Get <em>in touch</em></h2>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-text">
+                    <p>I'm a Computer Engineering graduate currently pursuing honours studies, with a strong interest in Data Analytics and Data Engineering. I'm actively seeking internships, graduate programmes, and junior roles where I can grow my technical and analytical skills.</p>
+                    <p>Have an opportunity, a question, or just want to connect? Reach out — I'm always open to new conversations.</p>
+                    <div class="contact-items">
+                        <a href="mailto:ndouatshii1@gmail.com" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            ndouatshii1@gmail.com
+                        </a>
+                        <a href="tel:+27665173939" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                            +27 66 517 3939
+                        </a>
+                        <div class="contact-item" style="cursor:default;">
+                            <div class="contact-item-icon"><i class="fas fa-map-pin"></i></div>
+                            Cape Town, South Africa
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-panel">
+                    <div class="contact-panel-icon"><i class="fas fa-paper-plane"></i></div>
+                    <h3>Let's Connect</h3>
+                    <p>Find me on LinkedIn and GitHub. Let's build something meaningful together.</p>
+                    <div class="social-row">
+                        <a href="https://www.linkedin.com/in/atshilaho-ndou-832a15263" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Atshi-na" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+       © Copyright 2026 ATSHILAHO NDOU | All rights reserved.​
+    </footer>
+
+</div>
+
+<!-- AI CHAT AGENT -->
+<div class="chat-bubble">
+    <button class="chat-toggle" id="chatToggle" aria-label="Chat with AI assistant">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-ping"></span>
+        <span class="chat-badge" id="chatBadge" style="display:none"></span>
+    </button>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-header-avatar"><i class="fas fa-robot"></i></div>
+            <div class="chat-header-info">
+                <div class="chat-header-name">Atshi's AI Assistant</div>
+                <div class="chat-header-status">Online — ask me anything</div>
+            </div>
+            <button class="chat-clear" id="chatClear" title="Clear history"><i class="fas fa-trash-alt"></i></button>
+            <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-typing-label" id="typingLabel" style="display:none">
+            <span>Atshi's Assistant is typing</span>
+            <span class="tl-dots"><span></span><span></span><span></span></span>
+        </div>
+        <div class="chat-suggestions" id="chatSuggestions">
+            <button class="chat-suggestion">What are his skills?</button>
+            <button class="chat-suggestion">Is he available?</button>
+            <button class="chat-suggestion">Tell me about his project</button>
+            <button class="chat-suggestion">How to contact him?</button>
+        </div>
+        <div class="chat-input-row">
+            <input class="chat-input" id="chatInput" type="text" placeholder="Ask about Atshilaho..." maxlength="300" />
+            <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ── PAGE ORDER & STATE ──
+    const pageOrder = ['home','about','education','skills','certifications','projects','contact'];
+    let currentPageId = 'home';
+
+    const homePage     = document.getElementById('home');
+    const innerWrapper = document.getElementById('inner-wrapper');
+
+    const innerPages = {
+        about:          document.getElementById('about'),
+        education:      document.getElementById('education'),
+        skills:         document.getElementById('skills'),
+        certifications: document.getElementById('certifications'),
+        projects:       document.getElementById('projects'),
+        contact:        document.getElementById('contact')
+    };
+
+    const allNavLinks = document.querySelectorAll('[data-page]');
+
+    function showHome() {
+        homePage.style.display = 'flex';
+        innerWrapper.style.display = 'none';
+        Object.values(innerPages).forEach(p => p?.classList.remove('active-page'));
+        allNavLinks.forEach(l => {
+            l.classList.toggle('active', l.getAttribute('data-page') === 'home');
+        });
+    }
+
+    function showInnerPage(id) {
+        homePage.style.display = 'none';
+        innerWrapper.style.display = 'block';
+        Object.values(innerPages).forEach(p => p?.classList.remove('active-page','enter-right','enter-left','enter-active'));
+
+        const next = innerPages[id];
+        if (!next) return;
+
+        const currentIndex = pageOrder.indexOf(currentPageId);
+        const nextIndex    = pageOrder.indexOf(id);
+        const goingForward = nextIndex > currentIndex;
+
+        next.classList.add(goingForward ? 'enter-right' : 'enter-left');
+        next.classList.add('active-page');
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            next.classList.remove('enter-right','enter-left');
+            next.classList.add('enter-active');
+            setTimeout(() => next.classList.remove('enter-active'), 400);
+        }));
+
+        allNavLinks.forEach(l => {
+            l.classList.toggle('active', l.getAttribute('data-page') === id);
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function activatePage(id) {
+        if (id === currentPageId && id !== 'home') return;
+        const prev = currentPageId;
+        currentPageId = id;
+        history.pushState(null, null, '#' + id);
+        if (id === 'home') {
+            showHome();
+        } else {
+            showInnerPage(id);
+        }
+    }
+
+    allNavLinks.forEach(l => {
+        l.addEventListener('click', e => {
+            e.preventDefault();
+            const id = l.getAttribute('data-page');
+            if (id) activatePage(id);
+        });
+    });
+
+    document.getElementById('logoLink')?.addEventListener('click', e => { e.preventDefault(); activatePage('home'); });
+
+    const initHash = window.location.hash.slice(1);
+    if (initHash && (initHash === 'home' || innerPages[initHash])) {
+        activatePage(initHash);
+    } else {
+        showHome();
+    }
+    window.addEventListener('hashchange', () => {
+        const h = window.location.hash.slice(1);
+        if (h === 'home' || innerPages[h]) activatePage(h);
+    });
+
+    // ── TYPEWRITER ──
+    const typeEl = document.getElementById('typewriter');
+    const phrase = 'Aspiring Data Analyst';
+    let charIndex = 0;
+    function typeWriter() {
+        if (!typeEl) return;
+        if (charIndex < phrase.length) {
+            typeEl.textContent = phrase.slice(0, charIndex + 1);
+            charIndex++;
+            setTimeout(typeWriter, 68);
+        }
+    }
+    setTimeout(typeWriter, 800);
+
+    // ── AI CHAT ──
+    // The API key never lives here. Requests go to a Cloudflare Worker
+    // proxy which holds the real Groq key server-side and forwards the
+    // reply back. Replace with your deployed Worker's URL.
+    const CHAT_WORKER_URL = 'https://portfolio-chat-proxy.ndouatshii1.workers.dev/';
+
+    const chatToggle      = document.getElementById('chatToggle');
+    const chatWindow      = document.getElementById('chatWindow');
+    const chatClose       = document.getElementById('chatClose');
+    const chatMessages    = document.getElementById('chatMessages');
+    const chatInput       = document.getElementById('chatInput');
+    const chatSend        = document.getElementById('chatSend');
+    const chatSuggestions = document.getElementById('chatSuggestions');
+    const chatBadge       = document.getElementById('chatBadge');
+    const typingLabel     = document.getElementById('typingLabel');
+
+    let isOpen = false, isLoading = false, unreadCount = 0;
+    let conversationHistory = [];
+    const STORAGE_KEY = 'atshi_chat_history';
+
+    function saveHistory(messages, history) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ messages, history })); } catch(e){}
+    }
+    function loadHistory() {
+        try { const s = localStorage.getItem(STORAGE_KEY); return s ? JSON.parse(s) : null; } catch { return null; }
+    }
+
+    function playChime() {
+        try {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const o1 = ctx.createOscillator(), o2 = ctx.createOscillator(), gain = ctx.createGain();
+            o1.connect(gain); o2.connect(gain); gain.connect(ctx.destination);
+            o1.frequency.value = 880; o2.frequency.value = 1320;
+            gain.gain.setValueAtTime(0, ctx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.12, ctx.currentTime + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+            o1.start(); o2.start(); o1.stop(ctx.currentTime + 0.6); o2.stop(ctx.currentTime + 0.6);
+        } catch(e){}
+    }
+
+    function getTime() { return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
+    function getGreeting() {
+        const h = new Date().getHours();
+        if (h < 12) return "Good morning! ☀️";
+        if (h < 17) return "Good afternoon! 👋";
+        if (h < 21) return "Good evening! 🌆";
+        return "Hey there! 🌙";
+    }
+    function setUnread(n) {
+        unreadCount = n;
+        if (chatBadge) { chatBadge.textContent = n; chatBadge.style.display = n > 0 ? 'flex' : 'none'; }
+    }
+
+    function addMessage(role, text) {
+        let followups = [];
+        if (role === 'bot') {
+            const match = text.match(/FOLLOWUPS:\s*(.+)/i);
+            if (match) { followups = match[1].split('|').map(s => s.trim()).filter(Boolean); text = text.replace(/FOLLOWUPS:.*/is, '').trim(); }
+        }
+        const msg = document.createElement('div');
+        msg.className = `chat-msg ${role}`;
+        msg.innerHTML = `
+            <div class="chat-msg-avatar">${role === 'bot' ? '<i class="fas fa-robot"></i>' : 'You'}</div>
+            <div class="chat-msg-content">
+                <div class="chat-msg-bubble">${text}</div>
+                <div class="chat-msg-time">${getTime()}</div>
+            </div>`;
+        chatMessages.appendChild(msg);
+        if (followups.length) {
+            const row = document.createElement('div');
+            row.className = 'chat-followups';
+            followups.forEach(q => {
+                const btn = document.createElement('button');
+                btn.className = 'chat-suggestion'; btn.textContent = q;
+                btn.addEventListener('click', () => { row.remove(); sendMessage(q); });
+                row.appendChild(btn);
+            });
+            chatMessages.appendChild(row);
+        }
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        const saved = loadHistory() || { messages: [], history: [] };
+        saved.messages.push({ role, text, time: getTime() });
+        saved.history = conversationHistory;
+        saveHistory(saved.messages, conversationHistory);
+        return text;
+    }
+
+    function restoreHistory() {
+        const saved = loadHistory();
+        if (saved?.messages?.length > 0) {
+            saved.messages.forEach(m => {
+                const msg = document.createElement('div');
+                msg.className = `chat-msg ${m.role}`;
+                msg.innerHTML = `<div class="chat-msg-avatar">${m.role === 'bot' ? '<i class="fas fa-robot"></i>' : 'You'}</div><div class="chat-msg-content"><div class="chat-msg-bubble">${m.text}</div><div class="chat-msg-time">${m.time||''}</div></div>`;
+                chatMessages.appendChild(msg);
+            });
+            conversationHistory = saved.history || [];
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            chatSuggestions.style.display = 'none';
+            return true;
+        }
+        return false;
+    }
+
+    function showTyping() {
+        if (typingLabel) typingLabel.style.display = 'flex';
+        const t = document.createElement('div');
+        t.className = 'chat-typing'; t.id = 'typingIndicator';
+        t.innerHTML = `<div class="chat-msg-avatar"><i class="fas fa-robot"></i></div><div class="chat-typing-dots"><span></span><span></span><span></span></div>`;
+        chatMessages.appendChild(t);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    function removeTyping() {
+        if (typingLabel) typingLabel.style.display = 'none';
+        document.getElementById('typingIndicator')?.remove();
+    }
+
+    chatToggle.addEventListener('click', () => {
+        isOpen = !isOpen;
+        chatWindow.classList.toggle('open', isOpen);
+        if (isOpen) {
+            setUnread(0);
+            const hadHistory = restoreHistory();
+            if (!hadHistory && chatMessages.children.length === 0) {
+                chatSuggestions.style.display = 'flex';
+                setTimeout(() => { addMessage('bot', `${getGreeting()} I'm Atshilaho's AI assistant. What would you like to know?`); playChime(); }, 600);
+            } else {
+                chatSuggestions.style.display = 'none';
+            }
+            chatInput.focus();
+        }
+    });
+    chatClose.addEventListener('click', () => { isOpen = false; chatWindow.classList.remove('open'); });
+    document.getElementById('chatClear').addEventListener('click', () => {
+        if (confirm('Clear chat history?')) {
+            localStorage.removeItem(STORAGE_KEY);
+            chatMessages.innerHTML = ''; conversationHistory = [];
+            chatSuggestions.style.display = 'flex';
+            addMessage('bot', `${getGreeting()} Chat cleared! How can I help you?`); playChime();
+        }
+    });
+
+    chatSuggestions.querySelectorAll('.chat-suggestion').forEach(btn => {
+        btn.addEventListener('click', () => sendMessage(btn.textContent));
+    });
+    chatInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !isLoading) sendMessage(chatInput.value); });
+    chatSend.addEventListener('click', () => { if (!isLoading) sendMessage(chatInput.value); });
+
+    async function sendMessage(text) {
+        text = text.trim();
+        if (!text || isLoading) return;
+        if (CHAT_WORKER_URL.includes('YOUR-WORKER-NAME')) {
+            addMessage('bot', '⚠️ Chat backend not configured yet. Deploy the Cloudflare Worker and set <code>CHAT_WORKER_URL</code> in Portfolio.html.');
+            chatInput.value = ''; return;
+        }
+        chatInput.value = '';
+        chatSuggestions.style.display = 'none';
+        document.querySelectorAll('.chat-followups').forEach(el => el.remove());
+        addMessage('user', text);
+        conversationHistory.push({ role: 'user', content: text });
+        isLoading = true; chatSend.disabled = true;
+        await new Promise(r => setTimeout(r, 1000 + Math.random() * 800));
+        showTyping();
+        try {
+            const response = await fetch(CHAT_WORKER_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ messages: conversationHistory })
+            });
+            const data = await response.json();
+            removeTyping();
+            if (response.status === 429) {
+                addMessage('bot', "You're sending messages a bit fast — please wait a minute and try again.");
+            } else if (data.choices?.[0]) {
+                const reply = data.choices[0].message.content;
+                conversationHistory.push({ role: 'assistant', content: reply });
+                addMessage('bot', reply); playChime();
+                if (!isOpen) setUnread(unreadCount + 1);
+                if (/not sure|don't know|cannot find|no information/i.test(reply)) {
+                    setTimeout(() => { addMessage('bot', '📬 Reach Atshilaho directly at <a href="mailto:ndouatshii1@gmail.com" style="color:var(--accent)">ndouatshii1@gmail.com</a> or <a href="tel:+27665173939" style="color:var(--accent)">+27 66 517 3939</a>.'); playChime(); }, 800);
+                }
+            } else { addMessage('bot', 'Sorry, something went wrong. Please try again.'); }
+        } catch(err) { removeTyping(); addMessage('bot', 'Connection error. Please try again.'); }
+        isLoading = false; chatSend.disabled = false; chatInput.focus();
+    }
+</script>
+</body>
+</html>
